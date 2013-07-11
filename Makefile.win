@@ -1,0 +1,99 @@
+# Project: epiDatabase
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe -D__DEBUG__
+CC   = gcc.exe -D__DEBUG__
+WINDRES = windres.exe
+RES  = epiDatabase_private.res
+OBJ  = main.o epiEngine/createdb.o epiEngine/createtbl.o epiEngine/dropdb.o epiEngine/renametbl.o types.o locale/fr/msg.o locale/en/msg.o sql/sql_tab.o sql/lex.yy.o epiEngine/utilstbl.o epiEngine/utilsdb.o epiEngine/checktbl.o epiEngine/insert.o epiEngine/optimizetbl.o epiEngine/select.o epiEngine/droptbl.o epiEngine/delete.o epiEngine/update.o epiEngine/use.o signal.o epiEngine/show_columns.o network.o $(RES)
+LINKOBJ  = main.o epiEngine/createdb.o epiEngine/createtbl.o epiEngine/dropdb.o epiEngine/renametbl.o types.o locale/fr/msg.o locale/en/msg.o sql/sql_tab.o sql/lex.yy.o epiEngine/utilstbl.o epiEngine/utilsdb.o epiEngine/checktbl.o epiEngine/insert.o epiEngine/optimizetbl.o epiEngine/select.o epiEngine/droptbl.o epiEngine/delete.o epiEngine/update.o epiEngine/use.o signal.o epiEngine/show_columns.o network.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  -lgmon -pg  -g3 -fmessage-length=0 
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = epiDatabase.exe
+CXXFLAGS = $(CXXINCS)   -Wall -ansi -ansi -traditional-cpp -pg -g3 -fmessage-length=0
+CFLAGS = $(INCS)   -Wall -ansi -ansi -traditional-cpp -pg -g3 -fmessage-length=0
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before epiDatabase.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "epiDatabase.exe" $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+epiEngine/createdb.o: epiEngine/createdb.c
+	$(CC) -c epiEngine/createdb.c -o epiEngine/createdb.o $(CFLAGS)
+
+epiEngine/createtbl.o: epiEngine/createtbl.c
+	$(CC) -c epiEngine/createtbl.c -o epiEngine/createtbl.o $(CFLAGS)
+
+epiEngine/dropdb.o: epiEngine/dropdb.c
+	$(CC) -c epiEngine/dropdb.c -o epiEngine/dropdb.o $(CFLAGS)
+
+epiEngine/renametbl.o: epiEngine/renametbl.c
+	$(CC) -c epiEngine/renametbl.c -o epiEngine/renametbl.o $(CFLAGS)
+
+types.o: types.c
+	$(CC) -c types.c -o types.o $(CFLAGS)
+
+locale/fr/msg.o: locale/fr/msg.c
+	$(CC) -c locale/fr/msg.c -o locale/fr/msg.o $(CFLAGS)
+
+locale/en/msg.o: locale/en/msg.c
+	$(CC) -c locale/en/msg.c -o locale/en/msg.o $(CFLAGS)
+
+sql/sql_tab.o: sql/sql_tab.c
+	$(CC) -c sql/sql_tab.c -o sql/sql_tab.o $(CFLAGS)
+
+sql/lex.yy.o: sql/lex.yy.c
+	$(CC) -c sql/lex.yy.c -o sql/lex.yy.o $(CFLAGS)
+
+epiEngine/utilstbl.o: epiEngine/utilstbl.c
+	$(CC) -c epiEngine/utilstbl.c -o epiEngine/utilstbl.o $(CFLAGS)
+
+epiEngine/utilsdb.o: epiEngine/utilsdb.c
+	$(CC) -c epiEngine/utilsdb.c -o epiEngine/utilsdb.o $(CFLAGS)
+
+epiEngine/checktbl.o: epiEngine/checktbl.c
+	$(CC) -c epiEngine/checktbl.c -o epiEngine/checktbl.o $(CFLAGS)
+
+epiEngine/insert.o: epiEngine/insert.c
+	$(CC) -c epiEngine/insert.c -o epiEngine/insert.o $(CFLAGS)
+
+epiEngine/optimizetbl.o: epiEngine/optimizetbl.c
+	$(CC) -c epiEngine/optimizetbl.c -o epiEngine/optimizetbl.o $(CFLAGS)
+
+epiEngine/select.o: epiEngine/select.c
+	$(CC) -c epiEngine/select.c -o epiEngine/select.o $(CFLAGS)
+
+epiEngine/droptbl.o: epiEngine/droptbl.c
+	$(CC) -c epiEngine/droptbl.c -o epiEngine/droptbl.o $(CFLAGS)
+
+epiEngine/delete.o: epiEngine/delete.c
+	$(CC) -c epiEngine/delete.c -o epiEngine/delete.o $(CFLAGS)
+
+epiEngine/update.o: epiEngine/update.c
+	$(CC) -c epiEngine/update.c -o epiEngine/update.o $(CFLAGS)
+
+epiEngine/use.o: epiEngine/use.c
+	$(CC) -c epiEngine/use.c -o epiEngine/use.o $(CFLAGS)
+
+signal.o: signal.c
+	$(CC) -c signal.c -o signal.o $(CFLAGS)
+
+epiEngine/show_columns.o: epiEngine/show_columns.c
+	$(CC) -c epiEngine/show_columns.c -o epiEngine/show_columns.o $(CFLAGS)
+
+network.o: network.c
+	$(CC) -c network.c -o network.o $(CFLAGS)
+
+epiDatabase_private.res: epiDatabase_private.rc 
+	$(WINDRES) -i epiDatabase_private.rc --input-format=rc -o epiDatabase_private.res -O coff 

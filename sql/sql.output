@@ -1,0 +1,3067 @@
+
+
+Terminals which are not used:
+
+   TOKADD
+   TOKALTER
+   TOKANALYSE
+   TOKAS
+   TOKASC
+   TOKASENSITIVE
+   TOKBEFORE
+   TOKBINARY
+   TOKBOTH
+   TOKBINARYTOKBLOB
+   TOKBY
+   TOKCALL
+   TOKCASCADE
+   TOKCASE
+   TOKCHANGE
+   TOKCHARACTER
+   TOKCOLLATE
+   TOKCOLUMN
+   TOKCONDITION
+   TOKCONNECTION
+   TOKCONSTRAINT
+   TOKCONTINUE
+   TOKCONVERT
+   TOKCROSS
+   TOKCURRENT_DATE
+   TOKCURRENT_TIME
+   TOKCURRENT_TIMESTAMP
+   TOKCURRENT_USER
+   TOKCURSOR
+   TOKDATABASES
+   TOKDAY_HOUR
+   TOKDAY_MICROSECOND
+   TOKDAY_MINUTE
+   TOKDAY_SECOND
+   TOKDEC
+   TOKDECLARE
+   TOKDEFAULT
+   TOKDELAYED
+   TOKDESC
+   TOKDESCRIBE
+   TOKDETERMINISTIC
+   TOKDISTINCTROW
+   TOKDIV
+   TOKDUAL
+   TOKEACH
+   TOKELSE
+   TOKELSEIF
+   TOKENCLOSED
+   TOKESCAPED
+   TOKEXIT
+   TOKEXPLAIN
+   TOKFALSE
+   TOKFETCH
+   TOKFOR
+   TOKFORCE
+   TOKFOREIGN
+   TOKFULLTEXT
+   TOKGOTO
+   TOKGRANT
+   TOKGROUP
+   TOKHAVING
+   TOKHIGH_PRIORITY
+   TOKHOUR_MICROSECOND
+   TOKHOUR_MINUTE
+   TOKHOUR_SECOND
+   TOKIGNORE
+   TOKINDEX
+   TOKINFILE
+   TOKINNER
+   TOKINOUT
+   TOKINSENSITIVE
+   TOKINTERVAL
+   TOKITERATE
+   TOKJOIN
+   TOKKEY
+   TOKKEYS
+   TOKKILL
+   TOKLEADING
+   TOKLEAVE
+   TOKLEFT
+   TOKLIMIT
+   TOKLINES
+   TOKLOAD
+   TOKLOCALTIME
+   TOKLOCALTIMESTAMP
+   TOKLOCK
+   TOKLONG
+   TOKLOOP
+   TOKLOW_PRIORITY
+   TOKMATCH
+   TOKMIDDLEINT
+   TOKMINUTE_MICROSECOND
+   TOKMINUTE_SECOND
+   TOKMOD
+   TOKMODIFIES
+   TOKNATURAL
+   TOKNO_WRITE_TO_BINLOG
+   TOKON
+   TOKOPTION
+   TOKOPTIONALLY
+   TOKORDER
+   TOKOUT
+   TOKOUTER
+   TOKOUTFILE
+   TOKPRECISION
+   TOKPRIMARY
+   TOKPROCEDURE
+   TOKPURGE
+   TOKREAD
+   TOKREADS
+   TOKREFERENCES
+   TOKREGEXP
+   TOKREPEAT
+   TOKREPLACE
+   TOKREQUIRE
+   TOKRESTRICT
+   TOKRETURN
+   TOKREVOKE
+   TOKRIGHT
+   TOKRLIKE
+   TOKSCHEMA
+   TOKSCHEMAS
+   TOKSECOND_MICROSECOND
+   TOKSENSITIVE
+   TOKSEPARATOR
+   TOKSONAME
+   TOKSPATIAL
+   TOKSPECIFIC
+   TOKSQL
+   TOKSQLEXCEPTION
+   TOKSQLSTATE
+   TOKSQLWARNING
+   TOKSQL_BIG_RESULT
+   TOKSQL_CALC_FOUND_ROWS
+   TOKSQL_SMALL_RESULT
+   TOKSSL
+   TOKSTARTING
+   TOKSTRAIGHT_JOIN
+   TOKTABLES
+   TOKTERMINATED
+   TOKTHEN
+   TOKTRAILING
+   TOKTRIGGER
+   TOKTRUE
+   TOKUNDO
+   TOKUNION
+   TOKUNIQUE
+   TOKUNLOCK
+   TOKUNSIGNED
+   TOKUSAGE
+   TOKUSING
+   TOKUTC_DATE
+   TOKUTC_TIME
+   TOKUTC_TIMESTAMP
+   TOKVARBINARY
+   TOKVARCHARACTER
+   TOKVARYING
+   TOKWHEN
+   TOKWHILE
+   TOKWITH
+   TOKWRITE
+   TOKXOR
+   TOKYEAR_MONTH
+   TOKZEROFILL
+
+
+Conflict in state 120 between rule 86 and token OR resolved as reduce.
+Conflict in state 120 between rule 86 and token AND resolved as reduce.
+Conflict in state 122 between rule 101 and token PLUS resolved as reduce.
+Conflict in state 122 between rule 101 and token MINUS resolved as reduce.
+Conflict in state 122 between rule 101 and token TIMES resolved as reduce.
+Conflict in state 122 between rule 101 and token DIVIDE resolved as reduce.
+Conflict in state 124 between rule 102 and token PLUS resolved as reduce.
+Conflict in state 124 between rule 102 and token MINUS resolved as reduce.
+Conflict in state 124 between rule 102 and token TIMES resolved as reduce.
+Conflict in state 124 between rule 102 and token DIVIDE resolved as reduce.
+Conflict in state 172 between rule 84 and token OR resolved as reduce.
+Conflict in state 172 between rule 84 and token AND resolved as shift.
+Conflict in state 173 between rule 85 and token OR resolved as reduce.
+Conflict in state 173 between rule 85 and token AND resolved as reduce.
+Conflict in state 180 between rule 97 and token PLUS resolved as reduce.
+Conflict in state 180 between rule 97 and token MINUS resolved as reduce.
+Conflict in state 180 between rule 97 and token TIMES resolved as reduce.
+Conflict in state 180 between rule 97 and token DIVIDE resolved as reduce.
+Conflict in state 181 between rule 98 and token PLUS resolved as reduce.
+Conflict in state 181 between rule 98 and token MINUS resolved as reduce.
+Conflict in state 181 between rule 98 and token TIMES resolved as reduce.
+Conflict in state 181 between rule 98 and token DIVIDE resolved as reduce.
+Conflict in state 182 between rule 99 and token PLUS resolved as reduce.
+Conflict in state 182 between rule 99 and token MINUS resolved as reduce.
+Conflict in state 182 between rule 99 and token TIMES resolved as reduce.
+Conflict in state 182 between rule 99 and token DIVIDE resolved as reduce.
+Conflict in state 183 between rule 100 and token PLUS resolved as reduce.
+Conflict in state 183 between rule 100 and token MINUS resolved as reduce.
+Conflict in state 183 between rule 100 and token TIMES resolved as reduce.
+Conflict in state 183 between rule 100 and token DIVIDE resolved as reduce.
+
+Grammar
+rule 1    @1 ->		/* empty */
+rule 2    commands -> command @1 SEMICOLON
+rule 3    @2 ->		/* empty */
+rule 4    commands -> commands command @2 final_semicolon
+rule 5    final_semicolon ->		/* empty */
+rule 6    final_semicolon -> SEMICOLON
+rule 7    command -> check_table
+rule 8    command -> create_database
+rule 9    command -> create_table
+rule 10   command -> deletetbl
+rule 11   command -> drop_database
+rule 12   command -> drop_table
+rule 13   command -> insert
+rule 14   command -> optimize_table
+rule 15   command -> select
+rule 16   command -> show_table
+rule 17   command -> rename_table
+rule 18   command -> update
+rule 19   command -> use
+rule 20   check_table -> TOKCHECK TOKTABLE table_ident_commalist
+rule 21   create_database -> TOKCREATE TOKDATABASE if_not_exists IDENT
+rule 22   create_table -> TOKCREATE TOKTABLE if_not_exists table_ident PARENTHESEOPEN column_definition_commalist PARENTHESECLOSE
+rule 23   column_definition_commalist -> column_definition
+rule 24   column_definition_commalist -> column_definition_commalist VIRGULE column_definition
+rule 25   column_definition -> IDENT column_type
+rule 26   column_type -> TOKTINYINT
+rule 27   column_type -> TOKSMALLINT
+rule 28   column_type -> TOKMEDIUMINT
+rule 29   column_type -> TOKINT
+rule 30   column_type -> TOKINTEGER
+rule 31   column_type -> TOKBIGINT
+rule 32   column_type -> TOKREAL
+rule 33   column_type -> TOKDOUBLE
+rule 34   column_type -> TOKFLOAT
+rule 35   column_type -> TOKDECIMAL
+rule 36   column_type -> TOKNUMERIC
+rule 37   column_type -> TOKDATE
+rule 38   column_type -> TOKTIME
+rule 39   column_type -> TOKTIMESTAMP
+rule 40   column_type -> TOKDATETIME
+rule 41   column_type -> TOKCHAR
+rule 42   column_type -> TOKVARCHAR
+rule 43   column_type -> TOKTINYBLOB
+rule 44   column_type -> TOKBLOB
+rule 45   column_type -> TOKMEDIUMBLOB
+rule 46   column_type -> TOKLONGBLOB
+rule 47   column_type -> TOKTINYTEXT
+rule 48   column_type -> TOKTEXT
+rule 49   column_type -> TOKMEDIUMTEXT
+rule 50   column_type -> TOKLONGTEXT
+rule 51   deletetbl -> TOKDELETE TOKFROM table_ident_commalist where
+rule 52   drop_database -> TOKDROP TOKDATABASE if_exists IDENT
+rule 53   drop_table -> TOKDROP TOKTABLE if_exists table_ident_commalist
+rule 54   insert -> TOKINSERT TOKINTO table_ident TOKVALUES PARENTHESEOPEN insert_values PARENTHESECLOSE
+rule 55   insert_values ->		/* empty */
+rule 56   insert_values -> insert_values IDENT VIRGULE
+rule 57   insert_values -> insert_values IDENT
+rule 58   optimize_table -> TOKOPTIMIZE TOKTABLE table_ident_commalist
+rule 59   rename_table -> TOKRENAME TOKTABLE table_rename_table_commalist
+rule 60   table_rename_table_commalist -> table_rename_table
+rule 61   table_rename_table_commalist -> table_rename_table_commalist VIRGULE table_rename_table
+rule 62   table_rename_table -> table_ident TOKTO table_ident
+rule 63   select -> TOKSELECT opt_select_all_distinct select_ident_or_joker TOKFROM table_ident_commalist where
+rule 64   opt_select_all_distinct ->		/* empty */
+rule 65   opt_select_all_distinct -> TOKALL
+rule 66   opt_select_all_distinct -> TOKDISTINCT
+rule 67   select_ident_or_joker -> IDENT
+rule 68   select_ident_or_joker -> TIMES
+rule 69   show_table -> TOKSHOW TOKTABLE table_ident_commalist
+rule 70   update -> TOKUPDATE table_ident_commalist TOKSET update_values
+rule 71   update_values ->		/* empty */
+rule 72   use -> TOKUSE IDENT
+rule 73   if_exists ->		/* empty */
+rule 74   if_exists -> TOKIF TOKEXISTS
+rule 75   if_not_exists ->		/* empty */
+rule 76   if_not_exists -> TOKIF NOT TOKEXISTS
+rule 77   table_ident_commalist ->		/* empty */
+rule 78   table_ident_commalist -> table_ident
+rule 79   table_ident_commalist -> table_ident_commalist VIRGULE table_ident
+rule 80   table_ident -> IDENT
+rule 81   table_ident -> IDENT DOT IDENT
+rule 82   where ->		/* empty */
+rule 83   where -> TOKWHERE condition
+rule 84   condition -> condition OR condition
+rule 85   condition -> condition AND condition
+rule 86   condition -> NOT condition
+rule 87   condition -> PARENTHESEOPEN condition PARENTHESECLOSE
+rule 88   condition -> predicate
+rule 89   predicate -> comparison_predicate
+rule 90   predicate -> between_predicate
+rule 91   predicate -> like_predicate
+rule 92   predicate -> test_for_null
+rule 93   predicate -> in_predicate
+rule 94   predicate -> existence_test
+rule 95   comparison_predicate -> scalar_exp COMPARISON scalar_exp
+rule 96   comparison_predicate -> scalar_exp COMPARISON subquery
+rule 97   scalar_exp -> scalar_exp PLUS scalar_exp
+rule 98   scalar_exp -> scalar_exp MINUS scalar_exp
+rule 99   scalar_exp -> scalar_exp TIMES scalar_exp
+rule 100  scalar_exp -> scalar_exp DIVIDE scalar_exp
+rule 101  scalar_exp -> PLUS scalar_exp
+rule 102  scalar_exp -> MINUS scalar_exp
+rule 103  scalar_exp -> atom
+rule 104  scalar_exp -> column_ref
+rule 105  scalar_exp -> PARENTHESEOPEN scalar_exp PARENTHESECLOSE
+rule 106  atom -> literal
+rule 107  literal -> STRING
+rule 108  literal -> FLOAT
+rule 109  literal -> INTEGER
+rule 110  subquery -> PARENTHESEOPEN select PARENTHESECLOSE
+rule 111  column_ref -> IDENT
+rule 112  column_ref -> IDENT DOT IDENT
+rule 113  column_ref -> IDENT DOT IDENT DOT IDENT
+rule 114  between_predicate -> scalar_exp NOT TOKBETWEEN scalar_exp AND scalar_exp
+rule 115  between_predicate -> scalar_exp TOKBETWEEN scalar_exp AND scalar_exp
+rule 116  like_predicate -> scalar_exp NOT TOKLIKE atom
+rule 117  like_predicate -> scalar_exp TOKLIKE atom
+rule 118  test_for_null -> column_ref TOKIS NOT TOKNULL
+rule 119  test_for_null -> column_ref TOKIS TOKNULL
+rule 120  in_predicate -> scalar_exp NOT TOKIN PARENTHESEOPEN subquery PARENTHESECLOSE
+rule 121  in_predicate -> scalar_exp TOKIN PARENTHESEOPEN subquery PARENTHESECLOSE
+rule 122  in_predicate -> scalar_exp NOT TOKIN PARENTHESEOPEN atom_commalist PARENTHESECLOSE
+rule 123  in_predicate -> scalar_exp TOKIN PARENTHESEOPEN atom_commalist PARENTHESECLOSE
+rule 124  atom_commalist -> atom
+rule 125  atom_commalist -> atom_commalist VIRGULE atom
+rule 126  existence_test -> TOKEXISTS subquery
+
+Terminals, with rules where they appear
+
+$ (-1)
+error (256)
+TOKADD (258)
+TOKALL (259) 65
+TOKALTER (260)
+TOKANALYSE (261)
+TOKAS (262)
+TOKASC (263)
+TOKASENSITIVE (264)
+TOKBEFORE (265)
+TOKBETWEEN (266) 114 115
+TOKBIGINT (267) 31
+TOKBINARY (268)
+TOKBLOB (269) 44
+TOKBOTH (270)
+TOKBINARYTOKBLOB (271)
+TOKBY (272)
+TOKCALL (273)
+TOKCASCADE (274)
+TOKCASE (275)
+TOKCHANGE (276)
+TOKCHAR (277) 41
+TOKCHARACTER (278)
+TOKCHECK (279) 20
+TOKCOLLATE (280)
+TOKCOLUMN (281)
+TOKCONDITION (282)
+TOKCONNECTION (283)
+TOKCONSTRAINT (284)
+TOKCONTINUE (285)
+TOKCONVERT (286)
+TOKCREATE (287) 21 22
+TOKCROSS (288)
+TOKCURRENT_DATE (289)
+TOKCURRENT_TIME (290)
+TOKCURRENT_TIMESTAMP (291)
+TOKCURRENT_USER (292)
+TOKCURSOR (293)
+TOKDATABASE (294) 21 52
+TOKDATABASES (295)
+TOKDATE (296) 37
+TOKDATETIME (297) 40
+TOKDAY_HOUR (298)
+TOKDAY_MICROSECOND (299)
+TOKDAY_MINUTE (300)
+TOKDAY_SECOND (301)
+TOKDEC (302)
+TOKDECIMAL (303) 35
+TOKDECLARE (304)
+TOKDEFAULT (305)
+TOKDELAYED (306)
+TOKDELETE (307) 51
+TOKDESC (308)
+TOKDESCRIBE (309)
+TOKDETERMINISTIC (310)
+TOKDISTINCT (311) 66
+TOKDISTINCTROW (312)
+TOKDIV (313)
+TOKDOUBLE (314) 33
+TOKDROP (315) 52 53
+TOKDUAL (316)
+TOKEACH (317)
+TOKELSE (318)
+TOKELSEIF (319)
+TOKENCLOSED (320)
+TOKESCAPED (321)
+TOKEXISTS (322) 74 76 126
+TOKEXIT (323)
+TOKEXPLAIN (324)
+TOKFALSE (325)
+TOKFETCH (326)
+TOKFLOAT (327) 34
+TOKFOR (328)
+TOKFORCE (329)
+TOKFOREIGN (330)
+TOKFROM (331) 51 63
+TOKFULLTEXT (332)
+TOKGOTO (333)
+TOKGRANT (334)
+TOKGROUP (335)
+TOKHAVING (336)
+TOKHIGH_PRIORITY (337)
+TOKHOUR_MICROSECOND (338)
+TOKHOUR_MINUTE (339)
+TOKHOUR_SECOND (340)
+TOKIF (341) 74 76
+TOKIGNORE (342)
+TOKIN (343) 120 121 122 123
+TOKINDEX (344)
+TOKINFILE (345)
+TOKINNER (346)
+TOKINOUT (347)
+TOKINSENSITIVE (348)
+TOKINSERT (349) 54
+TOKINT (350) 29
+TOKINTEGER (351) 30
+TOKINTERVAL (352)
+TOKINTO (353) 54
+TOKIS (354) 118 119
+TOKITERATE (355)
+TOKJOIN (356)
+TOKKEY (357)
+TOKKEYS (358)
+TOKKILL (359)
+TOKLEADING (360)
+TOKLEAVE (361)
+TOKLEFT (362)
+TOKLIKE (363) 116 117
+TOKLIMIT (364)
+TOKLINES (365)
+TOKLOAD (366)
+TOKLOCALTIME (367)
+TOKLOCALTIMESTAMP (368)
+TOKLOCK (369)
+TOKLONG (370)
+TOKLONGBLOB (371) 46
+TOKLONGTEXT (372) 50
+TOKLOOP (373)
+TOKLOW_PRIORITY (374)
+TOKMATCH (375)
+TOKMEDIUMBLOB (376) 45
+TOKMEDIUMINT (377) 28
+TOKMEDIUMTEXT (378) 49
+TOKMIDDLEINT (379)
+TOKMINUTE_MICROSECOND (380)
+TOKMINUTE_SECOND (381)
+TOKMOD (382)
+TOKMODIFIES (383)
+TOKNATURAL (384)
+TOKNO_WRITE_TO_BINLOG (385)
+TOKNULL (386) 118 119
+TOKNUMERIC (387) 36
+TOKON (388)
+TOKOPTIMIZE (389) 58
+TOKOPTION (390)
+TOKOPTIONALLY (391)
+TOKORDER (392)
+TOKOUT (393)
+TOKOUTER (394)
+TOKOUTFILE (395)
+TOKPRECISION (396)
+TOKPRIMARY (397)
+TOKPROCEDURE (398)
+TOKPURGE (399)
+TOKREAD (400)
+TOKREADS (401)
+TOKREAL (402) 32
+TOKREFERENCES (403)
+TOKREGEXP (404)
+TOKRENAME (405) 59
+TOKREPEAT (406)
+TOKREPLACE (407)
+TOKREQUIRE (408)
+TOKRESTRICT (409)
+TOKRETURN (410)
+TOKREVOKE (411)
+TOKRIGHT (412)
+TOKRLIKE (413)
+TOKSCHEMA (414)
+TOKSCHEMAS (415)
+TOKSECOND_MICROSECOND (416)
+TOKSELECT (417) 63
+TOKSENSITIVE (418)
+TOKSEPARATOR (419)
+TOKSET (420) 70
+TOKSHOW (421) 69
+TOKSMALLINT (422) 27
+TOKSONAME (423)
+TOKSPATIAL (424)
+TOKSPECIFIC (425)
+TOKSQL (426)
+TOKSQLEXCEPTION (427)
+TOKSQLSTATE (428)
+TOKSQLWARNING (429)
+TOKSQL_BIG_RESULT (430)
+TOKSQL_CALC_FOUND_ROWS (431)
+TOKSQL_SMALL_RESULT (432)
+TOKSSL (433)
+TOKSTARTING (434)
+TOKSTRAIGHT_JOIN (435)
+TOKTABLE (436) 20 22 53 58 59 69
+TOKTABLES (437)
+TOKTERMINATED (438)
+TOKTEXT (439) 48
+TOKTHEN (440)
+TOKTIME (441) 38
+TOKTIMESTAMP (442) 39
+TOKTINYBLOB (443) 43
+TOKTINYINT (444) 26
+TOKTINYTEXT (445) 47
+TOKTO (446) 62
+TOKTRAILING (447)
+TOKTRIGGER (448)
+TOKTRUE (449)
+TOKUNDO (450)
+TOKUNION (451)
+TOKUNIQUE (452)
+TOKUNLOCK (453)
+TOKUNSIGNED (454)
+TOKUPDATE (455) 70
+TOKUSAGE (456)
+TOKUSE (457) 72
+TOKUSING (458)
+TOKUTC_DATE (459)
+TOKUTC_TIME (460)
+TOKUTC_TIMESTAMP (461)
+TOKVALUES (462) 54
+TOKVARBINARY (463)
+TOKVARCHAR (464) 42
+TOKVARCHARACTER (465)
+TOKVARYING (466)
+TOKWHEN (467)
+TOKWHERE (468) 83
+TOKWHILE (469)
+TOKWITH (470)
+TOKWRITE (471)
+TOKXOR (472)
+TOKYEAR_MONTH (473)
+TOKZEROFILL (474)
+DOT (475) 81 112 113
+SEMICOLON (476) 2 6
+STRING (477) 107
+FLOAT (478) 108
+INTEGER (479) 109
+IDENT (480) 21 25 52 56 57 67 72 80 81 111 112 113
+VIRGULE (481) 24 56 61 79 125
+PARENTHESEOPEN (482) 22 54 87 105 110 120 121 122 123
+PARENTHESECLOSE (483) 22 54 87 105 110 120 121 122 123
+OR (484) 84
+AND (485) 85 114 115
+NOT (486) 76 86 114 116 118 120 122
+PLUS (487) 97 101
+MINUS (488) 98 102
+TIMES (489) 68 99
+DIVIDE (490) 100
+UMINUS (491)
+COMPARISON (492) 95 96
+
+Nonterminals, with rules where they appear
+
+commands (238)
+    on left: 2 4, on right: 4
+@1 (239)
+    on left: 1, on right: 2
+@2 (240)
+    on left: 3, on right: 4
+final_semicolon (241)
+    on left: 5 6, on right: 4
+command (242)
+    on left: 7 8 9 10 11 12 13 14 15 16 17 18 19, on right: 2 4
+check_table (243)
+    on left: 20, on right: 7
+create_database (244)
+    on left: 21, on right: 8
+create_table (245)
+    on left: 22, on right: 9
+column_definition_commalist (246)
+    on left: 23 24, on right: 22 24
+column_definition (247)
+    on left: 25, on right: 23 24
+column_type (248)
+    on left: 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43
+    44 45 46 47 48 49 50, on right: 25
+deletetbl (249)
+    on left: 51, on right: 10
+drop_database (250)
+    on left: 52, on right: 11
+drop_table (251)
+    on left: 53, on right: 12
+insert (252)
+    on left: 54, on right: 13
+insert_values (253)
+    on left: 55 56 57, on right: 54 56 57
+optimize_table (254)
+    on left: 58, on right: 14
+rename_table (255)
+    on left: 59, on right: 17
+table_rename_table_commalist (256)
+    on left: 60 61, on right: 59 61
+table_rename_table (257)
+    on left: 62, on right: 60 61
+select (258)
+    on left: 63, on right: 15 110
+opt_select_all_distinct (259)
+    on left: 64 65 66, on right: 63
+select_ident_or_joker (260)
+    on left: 67 68, on right: 63
+show_table (261)
+    on left: 69, on right: 16
+update (262)
+    on left: 70, on right: 18
+update_values (263)
+    on left: 71, on right: 70
+use (264)
+    on left: 72, on right: 19
+if_exists (265)
+    on left: 73 74, on right: 52 53
+if_not_exists (266)
+    on left: 75 76, on right: 21 22
+table_ident_commalist (267)
+    on left: 77 78 79, on right: 20 51 53 58 63 69 70 79
+table_ident (268)
+    on left: 80 81, on right: 22 54 62 78 79
+where (269)
+    on left: 82 83, on right: 51 63
+condition (270)
+    on left: 84 85 86 87 88, on right: 83 84 85 86 87
+predicate (271)
+    on left: 89 90 91 92 93 94, on right: 88
+comparison_predicate (272)
+    on left: 95 96, on right: 89
+scalar_exp (273)
+    on left: 97 98 99 100 101 102 103 104 105, on right: 95 96 97 98
+    99 100 101 102 105 114 115 116 117 120 121 122 123
+atom (274)
+    on left: 106, on right: 103 116 117 124 125
+literal (275)
+    on left: 107 108 109, on right: 106
+subquery (276)
+    on left: 110, on right: 96 120 121 126
+column_ref (277)
+    on left: 111 112 113, on right: 104 118 119
+between_predicate (278)
+    on left: 114 115, on right: 90
+like_predicate (279)
+    on left: 116 117, on right: 91
+test_for_null (280)
+    on left: 118 119, on right: 92
+in_predicate (281)
+    on left: 120 121 122 123, on right: 93
+atom_commalist (282)
+    on left: 124 125, on right: 122 123 125
+existence_test (283)
+    on left: 126, on right: 94
+
+
+state 0
+
+    TOKCHECK	shift, and go to state 1
+    TOKCREATE	shift, and go to state 2
+    TOKDELETE	shift, and go to state 3
+    TOKDROP	shift, and go to state 4
+    TOKINSERT	shift, and go to state 5
+    TOKOPTIMIZE	shift, and go to state 6
+    TOKRENAME	shift, and go to state 7
+    TOKSELECT	shift, and go to state 8
+    TOKSHOW	shift, and go to state 9
+    TOKUPDATE	shift, and go to state 10
+    TOKUSE	shift, and go to state 11
+
+    commands	go to state 12
+    command	go to state 13
+    check_table	go to state 14
+    create_database	go to state 15
+    create_table	go to state 16
+    deletetbl	go to state 17
+    drop_database	go to state 18
+    drop_table	go to state 19
+    insert	go to state 20
+    optimize_table	go to state 21
+    rename_table	go to state 22
+    select	go to state 23
+    show_table	go to state 24
+    update	go to state 25
+    use 	go to state 26
+
+
+
+state 1
+
+    check_table  ->  TOKCHECK . TOKTABLE table_ident_commalist   (rule 20)
+
+    TOKTABLE	shift, and go to state 27
+
+
+
+state 2
+
+    create_database  ->  TOKCREATE . TOKDATABASE if_not_exists IDENT   (rule 21)
+    create_table  ->  TOKCREATE . TOKTABLE if_not_exists table_ident PARENTHESEOPEN column_definition_commalist PARENTHESECLOSE   (rule 22)
+
+    TOKDATABASE	shift, and go to state 28
+    TOKTABLE	shift, and go to state 29
+
+
+
+state 3
+
+    deletetbl  ->  TOKDELETE . TOKFROM table_ident_commalist where   (rule 51)
+
+    TOKFROM	shift, and go to state 30
+
+
+
+state 4
+
+    drop_database  ->  TOKDROP . TOKDATABASE if_exists IDENT   (rule 52)
+    drop_table  ->  TOKDROP . TOKTABLE if_exists table_ident_commalist   (rule 53)
+
+    TOKDATABASE	shift, and go to state 31
+    TOKTABLE	shift, and go to state 32
+
+
+
+state 5
+
+    insert  ->  TOKINSERT . TOKINTO table_ident TOKVALUES PARENTHESEOPEN insert_values PARENTHESECLOSE   (rule 54)
+
+    TOKINTO	shift, and go to state 33
+
+
+
+state 6
+
+    optimize_table  ->  TOKOPTIMIZE . TOKTABLE table_ident_commalist   (rule 58)
+
+    TOKTABLE	shift, and go to state 34
+
+
+
+state 7
+
+    rename_table  ->  TOKRENAME . TOKTABLE table_rename_table_commalist   (rule 59)
+
+    TOKTABLE	shift, and go to state 35
+
+
+
+state 8
+
+    select  ->  TOKSELECT . opt_select_all_distinct select_ident_or_joker TOKFROM table_ident_commalist where   (rule 63)
+
+    TOKALL	shift, and go to state 36
+    TOKDISTINCT	shift, and go to state 37
+
+    $default	reduce using rule 64 (opt_select_all_distinct)
+
+    opt_select_all_distinct	go to state 38
+
+
+
+state 9
+
+    show_table  ->  TOKSHOW . TOKTABLE table_ident_commalist   (rule 69)
+
+    TOKTABLE	shift, and go to state 39
+
+
+
+state 10
+
+    update  ->  TOKUPDATE . table_ident_commalist TOKSET update_values   (rule 70)
+
+    IDENT	shift, and go to state 40
+
+    $default	reduce using rule 77 (table_ident_commalist)
+
+    table_ident_commalist	go to state 41
+    table_ident	go to state 42
+
+
+
+state 11
+
+    use  ->  TOKUSE . IDENT   (rule 72)
+
+    IDENT	shift, and go to state 43
+
+
+
+state 12
+
+    commands  ->  commands . command @2 final_semicolon   (rule 4)
+
+    $   	go to state 215
+    TOKCHECK	shift, and go to state 1
+    TOKCREATE	shift, and go to state 2
+    TOKDELETE	shift, and go to state 3
+    TOKDROP	shift, and go to state 4
+    TOKINSERT	shift, and go to state 5
+    TOKOPTIMIZE	shift, and go to state 6
+    TOKRENAME	shift, and go to state 7
+    TOKSELECT	shift, and go to state 8
+    TOKSHOW	shift, and go to state 9
+    TOKUPDATE	shift, and go to state 10
+    TOKUSE	shift, and go to state 11
+
+    command	go to state 44
+    check_table	go to state 14
+    create_database	go to state 15
+    create_table	go to state 16
+    deletetbl	go to state 17
+    drop_database	go to state 18
+    drop_table	go to state 19
+    insert	go to state 20
+    optimize_table	go to state 21
+    rename_table	go to state 22
+    select	go to state 23
+    show_table	go to state 24
+    update	go to state 25
+    use 	go to state 26
+
+
+
+state 13
+
+    commands  ->  command . @1 SEMICOLON   (rule 2)
+
+    $default	reduce using rule 1 (@1)
+
+    @1  	go to state 45
+
+
+
+state 14
+
+    command  ->  check_table .   (rule 7)
+
+    $default	reduce using rule 7 (command)
+
+
+
+state 15
+
+    command  ->  create_database .   (rule 8)
+
+    $default	reduce using rule 8 (command)
+
+
+
+state 16
+
+    command  ->  create_table .   (rule 9)
+
+    $default	reduce using rule 9 (command)
+
+
+
+state 17
+
+    command  ->  deletetbl .   (rule 10)
+
+    $default	reduce using rule 10 (command)
+
+
+
+state 18
+
+    command  ->  drop_database .   (rule 11)
+
+    $default	reduce using rule 11 (command)
+
+
+
+state 19
+
+    command  ->  drop_table .   (rule 12)
+
+    $default	reduce using rule 12 (command)
+
+
+
+state 20
+
+    command  ->  insert .   (rule 13)
+
+    $default	reduce using rule 13 (command)
+
+
+
+state 21
+
+    command  ->  optimize_table .   (rule 14)
+
+    $default	reduce using rule 14 (command)
+
+
+
+state 22
+
+    command  ->  rename_table .   (rule 17)
+
+    $default	reduce using rule 17 (command)
+
+
+
+state 23
+
+    command  ->  select .   (rule 15)
+
+    $default	reduce using rule 15 (command)
+
+
+
+state 24
+
+    command  ->  show_table .   (rule 16)
+
+    $default	reduce using rule 16 (command)
+
+
+
+state 25
+
+    command  ->  update .   (rule 18)
+
+    $default	reduce using rule 18 (command)
+
+
+
+state 26
+
+    command  ->  use .   (rule 19)
+
+    $default	reduce using rule 19 (command)
+
+
+
+state 27
+
+    check_table  ->  TOKCHECK TOKTABLE . table_ident_commalist   (rule 20)
+
+    IDENT	shift, and go to state 40
+
+    $default	reduce using rule 77 (table_ident_commalist)
+
+    table_ident_commalist	go to state 46
+    table_ident	go to state 42
+
+
+
+state 28
+
+    create_database  ->  TOKCREATE TOKDATABASE . if_not_exists IDENT   (rule 21)
+
+    TOKIF	shift, and go to state 47
+
+    $default	reduce using rule 75 (if_not_exists)
+
+    if_not_exists	go to state 48
+
+
+
+state 29
+
+    create_table  ->  TOKCREATE TOKTABLE . if_not_exists table_ident PARENTHESEOPEN column_definition_commalist PARENTHESECLOSE   (rule 22)
+
+    TOKIF	shift, and go to state 47
+
+    $default	reduce using rule 75 (if_not_exists)
+
+    if_not_exists	go to state 49
+
+
+
+state 30
+
+    deletetbl  ->  TOKDELETE TOKFROM . table_ident_commalist where   (rule 51)
+
+    IDENT	shift, and go to state 40
+
+    $default	reduce using rule 77 (table_ident_commalist)
+
+    table_ident_commalist	go to state 50
+    table_ident	go to state 42
+
+
+
+state 31
+
+    drop_database  ->  TOKDROP TOKDATABASE . if_exists IDENT   (rule 52)
+
+    TOKIF	shift, and go to state 51
+
+    $default	reduce using rule 73 (if_exists)
+
+    if_exists	go to state 52
+
+
+
+state 32
+
+    drop_table  ->  TOKDROP TOKTABLE . if_exists table_ident_commalist   (rule 53)
+
+    TOKIF	shift, and go to state 51
+
+    $default	reduce using rule 73 (if_exists)
+
+    if_exists	go to state 53
+
+
+
+state 33
+
+    insert  ->  TOKINSERT TOKINTO . table_ident TOKVALUES PARENTHESEOPEN insert_values PARENTHESECLOSE   (rule 54)
+
+    IDENT	shift, and go to state 40
+
+    table_ident	go to state 54
+
+
+
+state 34
+
+    optimize_table  ->  TOKOPTIMIZE TOKTABLE . table_ident_commalist   (rule 58)
+
+    IDENT	shift, and go to state 40
+
+    $default	reduce using rule 77 (table_ident_commalist)
+
+    table_ident_commalist	go to state 55
+    table_ident	go to state 42
+
+
+
+state 35
+
+    rename_table  ->  TOKRENAME TOKTABLE . table_rename_table_commalist   (rule 59)
+
+    IDENT	shift, and go to state 40
+
+    table_rename_table_commalist	go to state 56
+    table_rename_table	go to state 57
+    table_ident	go to state 58
+
+
+
+state 36
+
+    opt_select_all_distinct  ->  TOKALL .   (rule 65)
+
+    $default	reduce using rule 65 (opt_select_all_distinct)
+
+
+
+state 37
+
+    opt_select_all_distinct  ->  TOKDISTINCT .   (rule 66)
+
+    $default	reduce using rule 66 (opt_select_all_distinct)
+
+
+
+state 38
+
+    select  ->  TOKSELECT opt_select_all_distinct . select_ident_or_joker TOKFROM table_ident_commalist where   (rule 63)
+
+    IDENT	shift, and go to state 59
+    TIMES	shift, and go to state 60
+
+    select_ident_or_joker	go to state 61
+
+
+
+state 39
+
+    show_table  ->  TOKSHOW TOKTABLE . table_ident_commalist   (rule 69)
+
+    IDENT	shift, and go to state 40
+
+    $default	reduce using rule 77 (table_ident_commalist)
+
+    table_ident_commalist	go to state 62
+    table_ident	go to state 42
+
+
+
+state 40
+
+    table_ident  ->  IDENT .   (rule 80)
+    table_ident  ->  IDENT . DOT IDENT   (rule 81)
+
+    DOT 	shift, and go to state 63
+
+    $default	reduce using rule 80 (table_ident)
+
+
+
+state 41
+
+    update  ->  TOKUPDATE table_ident_commalist . TOKSET update_values   (rule 70)
+    table_ident_commalist  ->  table_ident_commalist . VIRGULE table_ident   (rule 79)
+
+    TOKSET	shift, and go to state 64
+    VIRGULE	shift, and go to state 65
+
+
+
+state 42
+
+    table_ident_commalist  ->  table_ident .   (rule 78)
+
+    $default	reduce using rule 78 (table_ident_commalist)
+
+
+
+state 43
+
+    use  ->  TOKUSE IDENT .   (rule 72)
+
+    $default	reduce using rule 72 (use)
+
+
+
+state 44
+
+    commands  ->  commands command . @2 final_semicolon   (rule 4)
+
+    $default	reduce using rule 3 (@2)
+
+    @2  	go to state 66
+
+
+
+state 45
+
+    commands  ->  command @1 . SEMICOLON   (rule 2)
+
+    SEMICOLON	shift, and go to state 67
+
+
+
+state 46
+
+    check_table  ->  TOKCHECK TOKTABLE table_ident_commalist .   (rule 20)
+    table_ident_commalist  ->  table_ident_commalist . VIRGULE table_ident   (rule 79)
+
+    VIRGULE	shift, and go to state 65
+
+    $default	reduce using rule 20 (check_table)
+
+
+
+state 47
+
+    if_not_exists  ->  TOKIF . NOT TOKEXISTS   (rule 76)
+
+    NOT 	shift, and go to state 68
+
+
+
+state 48
+
+    create_database  ->  TOKCREATE TOKDATABASE if_not_exists . IDENT   (rule 21)
+
+    IDENT	shift, and go to state 69
+
+
+
+state 49
+
+    create_table  ->  TOKCREATE TOKTABLE if_not_exists . table_ident PARENTHESEOPEN column_definition_commalist PARENTHESECLOSE   (rule 22)
+
+    IDENT	shift, and go to state 40
+
+    table_ident	go to state 70
+
+
+
+state 50
+
+    deletetbl  ->  TOKDELETE TOKFROM table_ident_commalist . where   (rule 51)
+    table_ident_commalist  ->  table_ident_commalist . VIRGULE table_ident   (rule 79)
+
+    TOKWHERE	shift, and go to state 71
+    VIRGULE	shift, and go to state 65
+
+    $default	reduce using rule 82 (where)
+
+    where	go to state 72
+
+
+
+state 51
+
+    if_exists  ->  TOKIF . TOKEXISTS   (rule 74)
+
+    TOKEXISTS	shift, and go to state 73
+
+
+
+state 52
+
+    drop_database  ->  TOKDROP TOKDATABASE if_exists . IDENT   (rule 52)
+
+    IDENT	shift, and go to state 74
+
+
+
+state 53
+
+    drop_table  ->  TOKDROP TOKTABLE if_exists . table_ident_commalist   (rule 53)
+
+    IDENT	shift, and go to state 40
+
+    $default	reduce using rule 77 (table_ident_commalist)
+
+    table_ident_commalist	go to state 75
+    table_ident	go to state 42
+
+
+
+state 54
+
+    insert  ->  TOKINSERT TOKINTO table_ident . TOKVALUES PARENTHESEOPEN insert_values PARENTHESECLOSE   (rule 54)
+
+    TOKVALUES	shift, and go to state 76
+
+
+
+state 55
+
+    optimize_table  ->  TOKOPTIMIZE TOKTABLE table_ident_commalist .   (rule 58)
+    table_ident_commalist  ->  table_ident_commalist . VIRGULE table_ident   (rule 79)
+
+    VIRGULE	shift, and go to state 65
+
+    $default	reduce using rule 58 (optimize_table)
+
+
+
+state 56
+
+    rename_table  ->  TOKRENAME TOKTABLE table_rename_table_commalist .   (rule 59)
+    table_rename_table_commalist  ->  table_rename_table_commalist . VIRGULE table_rename_table   (rule 61)
+
+    VIRGULE	shift, and go to state 77
+
+    $default	reduce using rule 59 (rename_table)
+
+
+
+state 57
+
+    table_rename_table_commalist  ->  table_rename_table .   (rule 60)
+
+    $default	reduce using rule 60 (table_rename_table_commalist)
+
+
+
+state 58
+
+    table_rename_table  ->  table_ident . TOKTO table_ident   (rule 62)
+
+    TOKTO	shift, and go to state 78
+
+
+
+state 59
+
+    select_ident_or_joker  ->  IDENT .   (rule 67)
+
+    $default	reduce using rule 67 (select_ident_or_joker)
+
+
+
+state 60
+
+    select_ident_or_joker  ->  TIMES .   (rule 68)
+
+    $default	reduce using rule 68 (select_ident_or_joker)
+
+
+
+state 61
+
+    select  ->  TOKSELECT opt_select_all_distinct select_ident_or_joker . TOKFROM table_ident_commalist where   (rule 63)
+
+    TOKFROM	shift, and go to state 79
+
+
+
+state 62
+
+    show_table  ->  TOKSHOW TOKTABLE table_ident_commalist .   (rule 69)
+    table_ident_commalist  ->  table_ident_commalist . VIRGULE table_ident   (rule 79)
+
+    VIRGULE	shift, and go to state 65
+
+    $default	reduce using rule 69 (show_table)
+
+
+
+state 63
+
+    table_ident  ->  IDENT DOT . IDENT   (rule 81)
+
+    IDENT	shift, and go to state 80
+
+
+
+state 64
+
+    update  ->  TOKUPDATE table_ident_commalist TOKSET . update_values   (rule 70)
+
+    $default	reduce using rule 71 (update_values)
+
+    update_values	go to state 81
+
+
+
+state 65
+
+    table_ident_commalist  ->  table_ident_commalist VIRGULE . table_ident   (rule 79)
+
+    IDENT	shift, and go to state 40
+
+    table_ident	go to state 82
+
+
+
+state 66
+
+    commands  ->  commands command @2 . final_semicolon   (rule 4)
+
+    SEMICOLON	shift, and go to state 83
+
+    $default	reduce using rule 5 (final_semicolon)
+
+    final_semicolon	go to state 84
+
+
+
+state 67
+
+    commands  ->  command @1 SEMICOLON .   (rule 2)
+
+    $default	reduce using rule 2 (commands)
+
+
+
+state 68
+
+    if_not_exists  ->  TOKIF NOT . TOKEXISTS   (rule 76)
+
+    TOKEXISTS	shift, and go to state 85
+
+
+
+state 69
+
+    create_database  ->  TOKCREATE TOKDATABASE if_not_exists IDENT .   (rule 21)
+
+    $default	reduce using rule 21 (create_database)
+
+
+
+state 70
+
+    create_table  ->  TOKCREATE TOKTABLE if_not_exists table_ident . PARENTHESEOPEN column_definition_commalist PARENTHESECLOSE   (rule 22)
+
+    PARENTHESEOPEN	shift, and go to state 86
+
+
+
+state 71
+
+    where  ->  TOKWHERE . condition   (rule 83)
+
+    TOKEXISTS	shift, and go to state 87
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 92
+    NOT 	shift, and go to state 93
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    condition	go to state 96
+    predicate	go to state 97
+    comparison_predicate	go to state 98
+    scalar_exp	go to state 99
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 102
+    between_predicate	go to state 103
+    like_predicate	go to state 104
+    test_for_null	go to state 105
+    in_predicate	go to state 106
+    existence_test	go to state 107
+
+
+
+state 72
+
+    deletetbl  ->  TOKDELETE TOKFROM table_ident_commalist where .   (rule 51)
+
+    $default	reduce using rule 51 (deletetbl)
+
+
+
+state 73
+
+    if_exists  ->  TOKIF TOKEXISTS .   (rule 74)
+
+    $default	reduce using rule 74 (if_exists)
+
+
+
+state 74
+
+    drop_database  ->  TOKDROP TOKDATABASE if_exists IDENT .   (rule 52)
+
+    $default	reduce using rule 52 (drop_database)
+
+
+
+state 75
+
+    drop_table  ->  TOKDROP TOKTABLE if_exists table_ident_commalist .   (rule 53)
+    table_ident_commalist  ->  table_ident_commalist . VIRGULE table_ident   (rule 79)
+
+    VIRGULE	shift, and go to state 65
+
+    $default	reduce using rule 53 (drop_table)
+
+
+
+state 76
+
+    insert  ->  TOKINSERT TOKINTO table_ident TOKVALUES . PARENTHESEOPEN insert_values PARENTHESECLOSE   (rule 54)
+
+    PARENTHESEOPEN	shift, and go to state 108
+
+
+
+state 77
+
+    table_rename_table_commalist  ->  table_rename_table_commalist VIRGULE . table_rename_table   (rule 61)
+
+    IDENT	shift, and go to state 40
+
+    table_rename_table	go to state 109
+    table_ident	go to state 58
+
+
+
+state 78
+
+    table_rename_table  ->  table_ident TOKTO . table_ident   (rule 62)
+
+    IDENT	shift, and go to state 40
+
+    table_ident	go to state 110
+
+
+
+state 79
+
+    select  ->  TOKSELECT opt_select_all_distinct select_ident_or_joker TOKFROM . table_ident_commalist where   (rule 63)
+
+    IDENT	shift, and go to state 40
+
+    $default	reduce using rule 77 (table_ident_commalist)
+
+    table_ident_commalist	go to state 111
+    table_ident	go to state 42
+
+
+
+state 80
+
+    table_ident  ->  IDENT DOT IDENT .   (rule 81)
+
+    $default	reduce using rule 81 (table_ident)
+
+
+
+state 81
+
+    update  ->  TOKUPDATE table_ident_commalist TOKSET update_values .   (rule 70)
+
+    $default	reduce using rule 70 (update)
+
+
+
+state 82
+
+    table_ident_commalist  ->  table_ident_commalist VIRGULE table_ident .   (rule 79)
+
+    $default	reduce using rule 79 (table_ident_commalist)
+
+
+
+state 83
+
+    final_semicolon  ->  SEMICOLON .   (rule 6)
+
+    $default	reduce using rule 6 (final_semicolon)
+
+
+
+state 84
+
+    commands  ->  commands command @2 final_semicolon .   (rule 4)
+
+    $default	reduce using rule 4 (commands)
+
+
+
+state 85
+
+    if_not_exists  ->  TOKIF NOT TOKEXISTS .   (rule 76)
+
+    $default	reduce using rule 76 (if_not_exists)
+
+
+
+state 86
+
+    create_table  ->  TOKCREATE TOKTABLE if_not_exists table_ident PARENTHESEOPEN . column_definition_commalist PARENTHESECLOSE   (rule 22)
+
+    IDENT	shift, and go to state 112
+
+    column_definition_commalist	go to state 113
+    column_definition	go to state 114
+
+
+
+state 87
+
+    existence_test  ->  TOKEXISTS . subquery   (rule 126)
+
+    PARENTHESEOPEN	shift, and go to state 115
+
+    subquery	go to state 116
+
+
+
+state 88
+
+    literal  ->  STRING .   (rule 107)
+
+    $default	reduce using rule 107 (literal)
+
+
+
+state 89
+
+    literal  ->  FLOAT .   (rule 108)
+
+    $default	reduce using rule 108 (literal)
+
+
+
+state 90
+
+    literal  ->  INTEGER .   (rule 109)
+
+    $default	reduce using rule 109 (literal)
+
+
+
+state 91
+
+    column_ref  ->  IDENT .   (rule 111)
+    column_ref  ->  IDENT . DOT IDENT   (rule 112)
+    column_ref  ->  IDENT . DOT IDENT DOT IDENT   (rule 113)
+
+    DOT 	shift, and go to state 117
+
+    $default	reduce using rule 111 (column_ref)
+
+
+
+state 92
+
+    condition  ->  PARENTHESEOPEN . condition PARENTHESECLOSE   (rule 87)
+    scalar_exp  ->  PARENTHESEOPEN . scalar_exp PARENTHESECLOSE   (rule 105)
+
+    TOKEXISTS	shift, and go to state 87
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 92
+    NOT 	shift, and go to state 93
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    condition	go to state 118
+    predicate	go to state 97
+    comparison_predicate	go to state 98
+    scalar_exp	go to state 119
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 102
+    between_predicate	go to state 103
+    like_predicate	go to state 104
+    test_for_null	go to state 105
+    in_predicate	go to state 106
+    existence_test	go to state 107
+
+
+
+state 93
+
+    condition  ->  NOT . condition   (rule 86)
+
+    TOKEXISTS	shift, and go to state 87
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 92
+    NOT 	shift, and go to state 93
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    condition	go to state 120
+    predicate	go to state 97
+    comparison_predicate	go to state 98
+    scalar_exp	go to state 99
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 102
+    between_predicate	go to state 103
+    like_predicate	go to state 104
+    test_for_null	go to state 105
+    in_predicate	go to state 106
+    existence_test	go to state 107
+
+
+
+state 94
+
+    scalar_exp  ->  PLUS . scalar_exp   (rule 101)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 121
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    scalar_exp	go to state 122
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 123
+
+
+
+state 95
+
+    scalar_exp  ->  MINUS . scalar_exp   (rule 102)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 121
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    scalar_exp	go to state 124
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 123
+
+
+
+state 96
+
+    where  ->  TOKWHERE condition .   (rule 83)
+    condition  ->  condition . OR condition   (rule 84)
+    condition  ->  condition . AND condition   (rule 85)
+
+    OR  	shift, and go to state 125
+    AND 	shift, and go to state 126
+
+    $default	reduce using rule 83 (where)
+
+
+
+state 97
+
+    condition  ->  predicate .   (rule 88)
+
+    $default	reduce using rule 88 (condition)
+
+
+
+state 98
+
+    predicate  ->  comparison_predicate .   (rule 89)
+
+    $default	reduce using rule 89 (predicate)
+
+
+
+state 99
+
+    comparison_predicate  ->  scalar_exp . COMPARISON scalar_exp   (rule 95)
+    comparison_predicate  ->  scalar_exp . COMPARISON subquery   (rule 96)
+    scalar_exp  ->  scalar_exp . PLUS scalar_exp   (rule 97)
+    scalar_exp  ->  scalar_exp . MINUS scalar_exp   (rule 98)
+    scalar_exp  ->  scalar_exp . TIMES scalar_exp   (rule 99)
+    scalar_exp  ->  scalar_exp . DIVIDE scalar_exp   (rule 100)
+    between_predicate  ->  scalar_exp . NOT TOKBETWEEN scalar_exp AND scalar_exp   (rule 114)
+    between_predicate  ->  scalar_exp . TOKBETWEEN scalar_exp AND scalar_exp   (rule 115)
+    like_predicate  ->  scalar_exp . NOT TOKLIKE atom   (rule 116)
+    like_predicate  ->  scalar_exp . TOKLIKE atom   (rule 117)
+    in_predicate  ->  scalar_exp . NOT TOKIN PARENTHESEOPEN subquery PARENTHESECLOSE   (rule 120)
+    in_predicate  ->  scalar_exp . TOKIN PARENTHESEOPEN subquery PARENTHESECLOSE   (rule 121)
+    in_predicate  ->  scalar_exp . NOT TOKIN PARENTHESEOPEN atom_commalist PARENTHESECLOSE   (rule 122)
+    in_predicate  ->  scalar_exp . TOKIN PARENTHESEOPEN atom_commalist PARENTHESECLOSE   (rule 123)
+
+    TOKBETWEEN	shift, and go to state 127
+    TOKIN	shift, and go to state 128
+    TOKLIKE	shift, and go to state 129
+    NOT 	shift, and go to state 130
+    PLUS	shift, and go to state 131
+    MINUS	shift, and go to state 132
+    TIMES	shift, and go to state 133
+    DIVIDE	shift, and go to state 134
+    COMPARISON	shift, and go to state 135
+
+
+
+state 100
+
+    scalar_exp  ->  atom .   (rule 103)
+
+    $default	reduce using rule 103 (scalar_exp)
+
+
+
+state 101
+
+    atom  ->  literal .   (rule 106)
+
+    $default	reduce using rule 106 (atom)
+
+
+
+state 102
+
+    scalar_exp  ->  column_ref .   (rule 104)
+    test_for_null  ->  column_ref . TOKIS NOT TOKNULL   (rule 118)
+    test_for_null  ->  column_ref . TOKIS TOKNULL   (rule 119)
+
+    TOKIS	shift, and go to state 136
+
+    $default	reduce using rule 104 (scalar_exp)
+
+
+
+state 103
+
+    predicate  ->  between_predicate .   (rule 90)
+
+    $default	reduce using rule 90 (predicate)
+
+
+
+state 104
+
+    predicate  ->  like_predicate .   (rule 91)
+
+    $default	reduce using rule 91 (predicate)
+
+
+
+state 105
+
+    predicate  ->  test_for_null .   (rule 92)
+
+    $default	reduce using rule 92 (predicate)
+
+
+
+state 106
+
+    predicate  ->  in_predicate .   (rule 93)
+
+    $default	reduce using rule 93 (predicate)
+
+
+
+state 107
+
+    predicate  ->  existence_test .   (rule 94)
+
+    $default	reduce using rule 94 (predicate)
+
+
+
+state 108
+
+    insert  ->  TOKINSERT TOKINTO table_ident TOKVALUES PARENTHESEOPEN . insert_values PARENTHESECLOSE   (rule 54)
+
+    $default	reduce using rule 55 (insert_values)
+
+    insert_values	go to state 137
+
+
+
+state 109
+
+    table_rename_table_commalist  ->  table_rename_table_commalist VIRGULE table_rename_table .   (rule 61)
+
+    $default	reduce using rule 61 (table_rename_table_commalist)
+
+
+
+state 110
+
+    table_rename_table  ->  table_ident TOKTO table_ident .   (rule 62)
+
+    $default	reduce using rule 62 (table_rename_table)
+
+
+
+state 111
+
+    select  ->  TOKSELECT opt_select_all_distinct select_ident_or_joker TOKFROM table_ident_commalist . where   (rule 63)
+    table_ident_commalist  ->  table_ident_commalist . VIRGULE table_ident   (rule 79)
+
+    TOKWHERE	shift, and go to state 71
+    VIRGULE	shift, and go to state 65
+
+    $default	reduce using rule 82 (where)
+
+    where	go to state 138
+
+
+
+state 112
+
+    column_definition  ->  IDENT . column_type   (rule 25)
+
+    TOKBIGINT	shift, and go to state 139
+    TOKBLOB	shift, and go to state 140
+    TOKCHAR	shift, and go to state 141
+    TOKDATE	shift, and go to state 142
+    TOKDATETIME	shift, and go to state 143
+    TOKDECIMAL	shift, and go to state 144
+    TOKDOUBLE	shift, and go to state 145
+    TOKFLOAT	shift, and go to state 146
+    TOKINT	shift, and go to state 147
+    TOKINTEGER	shift, and go to state 148
+    TOKLONGBLOB	shift, and go to state 149
+    TOKLONGTEXT	shift, and go to state 150
+    TOKMEDIUMBLOB	shift, and go to state 151
+    TOKMEDIUMINT	shift, and go to state 152
+    TOKMEDIUMTEXT	shift, and go to state 153
+    TOKNUMERIC	shift, and go to state 154
+    TOKREAL	shift, and go to state 155
+    TOKSMALLINT	shift, and go to state 156
+    TOKTEXT	shift, and go to state 157
+    TOKTIME	shift, and go to state 158
+    TOKTIMESTAMP	shift, and go to state 159
+    TOKTINYBLOB	shift, and go to state 160
+    TOKTINYINT	shift, and go to state 161
+    TOKTINYTEXT	shift, and go to state 162
+    TOKVARCHAR	shift, and go to state 163
+
+    column_type	go to state 164
+
+
+
+state 113
+
+    create_table  ->  TOKCREATE TOKTABLE if_not_exists table_ident PARENTHESEOPEN column_definition_commalist . PARENTHESECLOSE   (rule 22)
+    column_definition_commalist  ->  column_definition_commalist . VIRGULE column_definition   (rule 24)
+
+    VIRGULE	shift, and go to state 165
+    PARENTHESECLOSE	shift, and go to state 166
+
+
+
+state 114
+
+    column_definition_commalist  ->  column_definition .   (rule 23)
+
+    $default	reduce using rule 23 (column_definition_commalist)
+
+
+
+state 115
+
+    subquery  ->  PARENTHESEOPEN . select PARENTHESECLOSE   (rule 110)
+
+    TOKSELECT	shift, and go to state 8
+
+    select	go to state 167
+
+
+
+state 116
+
+    existence_test  ->  TOKEXISTS subquery .   (rule 126)
+
+    $default	reduce using rule 126 (existence_test)
+
+
+
+state 117
+
+    column_ref  ->  IDENT DOT . IDENT   (rule 112)
+    column_ref  ->  IDENT DOT . IDENT DOT IDENT   (rule 113)
+
+    IDENT	shift, and go to state 168
+
+
+
+state 118
+
+    condition  ->  condition . OR condition   (rule 84)
+    condition  ->  condition . AND condition   (rule 85)
+    condition  ->  PARENTHESEOPEN condition . PARENTHESECLOSE   (rule 87)
+
+    PARENTHESECLOSE	shift, and go to state 169
+    OR  	shift, and go to state 125
+    AND 	shift, and go to state 126
+
+
+
+state 119
+
+    comparison_predicate  ->  scalar_exp . COMPARISON scalar_exp   (rule 95)
+    comparison_predicate  ->  scalar_exp . COMPARISON subquery   (rule 96)
+    scalar_exp  ->  scalar_exp . PLUS scalar_exp   (rule 97)
+    scalar_exp  ->  scalar_exp . MINUS scalar_exp   (rule 98)
+    scalar_exp  ->  scalar_exp . TIMES scalar_exp   (rule 99)
+    scalar_exp  ->  scalar_exp . DIVIDE scalar_exp   (rule 100)
+    scalar_exp  ->  PARENTHESEOPEN scalar_exp . PARENTHESECLOSE   (rule 105)
+    between_predicate  ->  scalar_exp . NOT TOKBETWEEN scalar_exp AND scalar_exp   (rule 114)
+    between_predicate  ->  scalar_exp . TOKBETWEEN scalar_exp AND scalar_exp   (rule 115)
+    like_predicate  ->  scalar_exp . NOT TOKLIKE atom   (rule 116)
+    like_predicate  ->  scalar_exp . TOKLIKE atom   (rule 117)
+    in_predicate  ->  scalar_exp . NOT TOKIN PARENTHESEOPEN subquery PARENTHESECLOSE   (rule 120)
+    in_predicate  ->  scalar_exp . TOKIN PARENTHESEOPEN subquery PARENTHESECLOSE   (rule 121)
+    in_predicate  ->  scalar_exp . NOT TOKIN PARENTHESEOPEN atom_commalist PARENTHESECLOSE   (rule 122)
+    in_predicate  ->  scalar_exp . TOKIN PARENTHESEOPEN atom_commalist PARENTHESECLOSE   (rule 123)
+
+    TOKBETWEEN	shift, and go to state 127
+    TOKIN	shift, and go to state 128
+    TOKLIKE	shift, and go to state 129
+    PARENTHESECLOSE	shift, and go to state 170
+    NOT 	shift, and go to state 130
+    PLUS	shift, and go to state 131
+    MINUS	shift, and go to state 132
+    TIMES	shift, and go to state 133
+    DIVIDE	shift, and go to state 134
+    COMPARISON	shift, and go to state 135
+
+
+
+state 120
+
+    condition  ->  condition . OR condition   (rule 84)
+    condition  ->  condition . AND condition   (rule 85)
+    condition  ->  NOT condition .   (rule 86)
+
+
+    $default	reduce using rule 86 (condition)
+
+
+
+state 121
+
+    scalar_exp  ->  PARENTHESEOPEN . scalar_exp PARENTHESECLOSE   (rule 105)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 121
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    scalar_exp	go to state 171
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 123
+
+
+
+state 122
+
+    scalar_exp  ->  scalar_exp . PLUS scalar_exp   (rule 97)
+    scalar_exp  ->  scalar_exp . MINUS scalar_exp   (rule 98)
+    scalar_exp  ->  scalar_exp . TIMES scalar_exp   (rule 99)
+    scalar_exp  ->  scalar_exp . DIVIDE scalar_exp   (rule 100)
+    scalar_exp  ->  PLUS scalar_exp .   (rule 101)
+
+
+    $default	reduce using rule 101 (scalar_exp)
+
+
+
+state 123
+
+    scalar_exp  ->  column_ref .   (rule 104)
+
+    $default	reduce using rule 104 (scalar_exp)
+
+
+
+state 124
+
+    scalar_exp  ->  scalar_exp . PLUS scalar_exp   (rule 97)
+    scalar_exp  ->  scalar_exp . MINUS scalar_exp   (rule 98)
+    scalar_exp  ->  scalar_exp . TIMES scalar_exp   (rule 99)
+    scalar_exp  ->  scalar_exp . DIVIDE scalar_exp   (rule 100)
+    scalar_exp  ->  MINUS scalar_exp .   (rule 102)
+
+
+    $default	reduce using rule 102 (scalar_exp)
+
+
+
+state 125
+
+    condition  ->  condition OR . condition   (rule 84)
+
+    TOKEXISTS	shift, and go to state 87
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 92
+    NOT 	shift, and go to state 93
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    condition	go to state 172
+    predicate	go to state 97
+    comparison_predicate	go to state 98
+    scalar_exp	go to state 99
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 102
+    between_predicate	go to state 103
+    like_predicate	go to state 104
+    test_for_null	go to state 105
+    in_predicate	go to state 106
+    existence_test	go to state 107
+
+
+
+state 126
+
+    condition  ->  condition AND . condition   (rule 85)
+
+    TOKEXISTS	shift, and go to state 87
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 92
+    NOT 	shift, and go to state 93
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    condition	go to state 173
+    predicate	go to state 97
+    comparison_predicate	go to state 98
+    scalar_exp	go to state 99
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 102
+    between_predicate	go to state 103
+    like_predicate	go to state 104
+    test_for_null	go to state 105
+    in_predicate	go to state 106
+    existence_test	go to state 107
+
+
+
+state 127
+
+    between_predicate  ->  scalar_exp TOKBETWEEN . scalar_exp AND scalar_exp   (rule 115)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 121
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    scalar_exp	go to state 174
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 123
+
+
+
+state 128
+
+    in_predicate  ->  scalar_exp TOKIN . PARENTHESEOPEN subquery PARENTHESECLOSE   (rule 121)
+    in_predicate  ->  scalar_exp TOKIN . PARENTHESEOPEN atom_commalist PARENTHESECLOSE   (rule 123)
+
+    PARENTHESEOPEN	shift, and go to state 175
+
+
+
+state 129
+
+    like_predicate  ->  scalar_exp TOKLIKE . atom   (rule 117)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+
+    atom	go to state 176
+    literal	go to state 101
+
+
+
+state 130
+
+    between_predicate  ->  scalar_exp NOT . TOKBETWEEN scalar_exp AND scalar_exp   (rule 114)
+    like_predicate  ->  scalar_exp NOT . TOKLIKE atom   (rule 116)
+    in_predicate  ->  scalar_exp NOT . TOKIN PARENTHESEOPEN subquery PARENTHESECLOSE   (rule 120)
+    in_predicate  ->  scalar_exp NOT . TOKIN PARENTHESEOPEN atom_commalist PARENTHESECLOSE   (rule 122)
+
+    TOKBETWEEN	shift, and go to state 177
+    TOKIN	shift, and go to state 178
+    TOKLIKE	shift, and go to state 179
+
+
+
+state 131
+
+    scalar_exp  ->  scalar_exp PLUS . scalar_exp   (rule 97)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 121
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    scalar_exp	go to state 180
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 123
+
+
+
+state 132
+
+    scalar_exp  ->  scalar_exp MINUS . scalar_exp   (rule 98)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 121
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    scalar_exp	go to state 181
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 123
+
+
+
+state 133
+
+    scalar_exp  ->  scalar_exp TIMES . scalar_exp   (rule 99)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 121
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    scalar_exp	go to state 182
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 123
+
+
+
+state 134
+
+    scalar_exp  ->  scalar_exp DIVIDE . scalar_exp   (rule 100)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 121
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    scalar_exp	go to state 183
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 123
+
+
+
+state 135
+
+    comparison_predicate  ->  scalar_exp COMPARISON . scalar_exp   (rule 95)
+    comparison_predicate  ->  scalar_exp COMPARISON . subquery   (rule 96)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 184
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    scalar_exp	go to state 185
+    atom	go to state 100
+    literal	go to state 101
+    subquery	go to state 186
+    column_ref	go to state 123
+
+
+
+state 136
+
+    test_for_null  ->  column_ref TOKIS . NOT TOKNULL   (rule 118)
+    test_for_null  ->  column_ref TOKIS . TOKNULL   (rule 119)
+
+    TOKNULL	shift, and go to state 187
+    NOT 	shift, and go to state 188
+
+
+
+state 137
+
+    insert  ->  TOKINSERT TOKINTO table_ident TOKVALUES PARENTHESEOPEN insert_values . PARENTHESECLOSE   (rule 54)
+    insert_values  ->  insert_values . IDENT VIRGULE   (rule 56)
+    insert_values  ->  insert_values . IDENT   (rule 57)
+
+    IDENT	shift, and go to state 189
+    PARENTHESECLOSE	shift, and go to state 190
+
+
+
+state 138
+
+    select  ->  TOKSELECT opt_select_all_distinct select_ident_or_joker TOKFROM table_ident_commalist where .   (rule 63)
+
+    $default	reduce using rule 63 (select)
+
+
+
+state 139
+
+    column_type  ->  TOKBIGINT .   (rule 31)
+
+    $default	reduce using rule 31 (column_type)
+
+
+
+state 140
+
+    column_type  ->  TOKBLOB .   (rule 44)
+
+    $default	reduce using rule 44 (column_type)
+
+
+
+state 141
+
+    column_type  ->  TOKCHAR .   (rule 41)
+
+    $default	reduce using rule 41 (column_type)
+
+
+
+state 142
+
+    column_type  ->  TOKDATE .   (rule 37)
+
+    $default	reduce using rule 37 (column_type)
+
+
+
+state 143
+
+    column_type  ->  TOKDATETIME .   (rule 40)
+
+    $default	reduce using rule 40 (column_type)
+
+
+
+state 144
+
+    column_type  ->  TOKDECIMAL .   (rule 35)
+
+    $default	reduce using rule 35 (column_type)
+
+
+
+state 145
+
+    column_type  ->  TOKDOUBLE .   (rule 33)
+
+    $default	reduce using rule 33 (column_type)
+
+
+
+state 146
+
+    column_type  ->  TOKFLOAT .   (rule 34)
+
+    $default	reduce using rule 34 (column_type)
+
+
+
+state 147
+
+    column_type  ->  TOKINT .   (rule 29)
+
+    $default	reduce using rule 29 (column_type)
+
+
+
+state 148
+
+    column_type  ->  TOKINTEGER .   (rule 30)
+
+    $default	reduce using rule 30 (column_type)
+
+
+
+state 149
+
+    column_type  ->  TOKLONGBLOB .   (rule 46)
+
+    $default	reduce using rule 46 (column_type)
+
+
+
+state 150
+
+    column_type  ->  TOKLONGTEXT .   (rule 50)
+
+    $default	reduce using rule 50 (column_type)
+
+
+
+state 151
+
+    column_type  ->  TOKMEDIUMBLOB .   (rule 45)
+
+    $default	reduce using rule 45 (column_type)
+
+
+
+state 152
+
+    column_type  ->  TOKMEDIUMINT .   (rule 28)
+
+    $default	reduce using rule 28 (column_type)
+
+
+
+state 153
+
+    column_type  ->  TOKMEDIUMTEXT .   (rule 49)
+
+    $default	reduce using rule 49 (column_type)
+
+
+
+state 154
+
+    column_type  ->  TOKNUMERIC .   (rule 36)
+
+    $default	reduce using rule 36 (column_type)
+
+
+
+state 155
+
+    column_type  ->  TOKREAL .   (rule 32)
+
+    $default	reduce using rule 32 (column_type)
+
+
+
+state 156
+
+    column_type  ->  TOKSMALLINT .   (rule 27)
+
+    $default	reduce using rule 27 (column_type)
+
+
+
+state 157
+
+    column_type  ->  TOKTEXT .   (rule 48)
+
+    $default	reduce using rule 48 (column_type)
+
+
+
+state 158
+
+    column_type  ->  TOKTIME .   (rule 38)
+
+    $default	reduce using rule 38 (column_type)
+
+
+
+state 159
+
+    column_type  ->  TOKTIMESTAMP .   (rule 39)
+
+    $default	reduce using rule 39 (column_type)
+
+
+
+state 160
+
+    column_type  ->  TOKTINYBLOB .   (rule 43)
+
+    $default	reduce using rule 43 (column_type)
+
+
+
+state 161
+
+    column_type  ->  TOKTINYINT .   (rule 26)
+
+    $default	reduce using rule 26 (column_type)
+
+
+
+state 162
+
+    column_type  ->  TOKTINYTEXT .   (rule 47)
+
+    $default	reduce using rule 47 (column_type)
+
+
+
+state 163
+
+    column_type  ->  TOKVARCHAR .   (rule 42)
+
+    $default	reduce using rule 42 (column_type)
+
+
+
+state 164
+
+    column_definition  ->  IDENT column_type .   (rule 25)
+
+    $default	reduce using rule 25 (column_definition)
+
+
+
+state 165
+
+    column_definition_commalist  ->  column_definition_commalist VIRGULE . column_definition   (rule 24)
+
+    IDENT	shift, and go to state 112
+
+    column_definition	go to state 191
+
+
+
+state 166
+
+    create_table  ->  TOKCREATE TOKTABLE if_not_exists table_ident PARENTHESEOPEN column_definition_commalist PARENTHESECLOSE .   (rule 22)
+
+    $default	reduce using rule 22 (create_table)
+
+
+
+state 167
+
+    subquery  ->  PARENTHESEOPEN select . PARENTHESECLOSE   (rule 110)
+
+    PARENTHESECLOSE	shift, and go to state 192
+
+
+
+state 168
+
+    column_ref  ->  IDENT DOT IDENT .   (rule 112)
+    column_ref  ->  IDENT DOT IDENT . DOT IDENT   (rule 113)
+
+    DOT 	shift, and go to state 193
+
+    $default	reduce using rule 112 (column_ref)
+
+
+
+state 169
+
+    condition  ->  PARENTHESEOPEN condition PARENTHESECLOSE .   (rule 87)
+
+    $default	reduce using rule 87 (condition)
+
+
+
+state 170
+
+    scalar_exp  ->  PARENTHESEOPEN scalar_exp PARENTHESECLOSE .   (rule 105)
+
+    $default	reduce using rule 105 (scalar_exp)
+
+
+
+state 171
+
+    scalar_exp  ->  scalar_exp . PLUS scalar_exp   (rule 97)
+    scalar_exp  ->  scalar_exp . MINUS scalar_exp   (rule 98)
+    scalar_exp  ->  scalar_exp . TIMES scalar_exp   (rule 99)
+    scalar_exp  ->  scalar_exp . DIVIDE scalar_exp   (rule 100)
+    scalar_exp  ->  PARENTHESEOPEN scalar_exp . PARENTHESECLOSE   (rule 105)
+
+    PARENTHESECLOSE	shift, and go to state 170
+    PLUS	shift, and go to state 131
+    MINUS	shift, and go to state 132
+    TIMES	shift, and go to state 133
+    DIVIDE	shift, and go to state 134
+
+
+
+state 172
+
+    condition  ->  condition . OR condition   (rule 84)
+    condition  ->  condition OR condition .   (rule 84)
+    condition  ->  condition . AND condition   (rule 85)
+
+    AND 	shift, and go to state 126
+
+    $default	reduce using rule 84 (condition)
+
+
+
+state 173
+
+    condition  ->  condition . OR condition   (rule 84)
+    condition  ->  condition . AND condition   (rule 85)
+    condition  ->  condition AND condition .   (rule 85)
+
+
+    $default	reduce using rule 85 (condition)
+
+
+
+state 174
+
+    scalar_exp  ->  scalar_exp . PLUS scalar_exp   (rule 97)
+    scalar_exp  ->  scalar_exp . MINUS scalar_exp   (rule 98)
+    scalar_exp  ->  scalar_exp . TIMES scalar_exp   (rule 99)
+    scalar_exp  ->  scalar_exp . DIVIDE scalar_exp   (rule 100)
+    between_predicate  ->  scalar_exp TOKBETWEEN scalar_exp . AND scalar_exp   (rule 115)
+
+    AND 	shift, and go to state 194
+    PLUS	shift, and go to state 131
+    MINUS	shift, and go to state 132
+    TIMES	shift, and go to state 133
+    DIVIDE	shift, and go to state 134
+
+
+
+state 175
+
+    in_predicate  ->  scalar_exp TOKIN PARENTHESEOPEN . subquery PARENTHESECLOSE   (rule 121)
+    in_predicate  ->  scalar_exp TOKIN PARENTHESEOPEN . atom_commalist PARENTHESECLOSE   (rule 123)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    PARENTHESEOPEN	shift, and go to state 115
+
+    atom	go to state 195
+    literal	go to state 101
+    subquery	go to state 196
+    atom_commalist	go to state 197
+
+
+
+state 176
+
+    like_predicate  ->  scalar_exp TOKLIKE atom .   (rule 117)
+
+    $default	reduce using rule 117 (like_predicate)
+
+
+
+state 177
+
+    between_predicate  ->  scalar_exp NOT TOKBETWEEN . scalar_exp AND scalar_exp   (rule 114)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 121
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    scalar_exp	go to state 198
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 123
+
+
+
+state 178
+
+    in_predicate  ->  scalar_exp NOT TOKIN . PARENTHESEOPEN subquery PARENTHESECLOSE   (rule 120)
+    in_predicate  ->  scalar_exp NOT TOKIN . PARENTHESEOPEN atom_commalist PARENTHESECLOSE   (rule 122)
+
+    PARENTHESEOPEN	shift, and go to state 199
+
+
+
+state 179
+
+    like_predicate  ->  scalar_exp NOT TOKLIKE . atom   (rule 116)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+
+    atom	go to state 200
+    literal	go to state 101
+
+
+
+state 180
+
+    scalar_exp  ->  scalar_exp . PLUS scalar_exp   (rule 97)
+    scalar_exp  ->  scalar_exp PLUS scalar_exp .   (rule 97)
+    scalar_exp  ->  scalar_exp . MINUS scalar_exp   (rule 98)
+    scalar_exp  ->  scalar_exp . TIMES scalar_exp   (rule 99)
+    scalar_exp  ->  scalar_exp . DIVIDE scalar_exp   (rule 100)
+
+
+    $default	reduce using rule 97 (scalar_exp)
+
+
+
+state 181
+
+    scalar_exp  ->  scalar_exp . PLUS scalar_exp   (rule 97)
+    scalar_exp  ->  scalar_exp . MINUS scalar_exp   (rule 98)
+    scalar_exp  ->  scalar_exp MINUS scalar_exp .   (rule 98)
+    scalar_exp  ->  scalar_exp . TIMES scalar_exp   (rule 99)
+    scalar_exp  ->  scalar_exp . DIVIDE scalar_exp   (rule 100)
+
+
+    $default	reduce using rule 98 (scalar_exp)
+
+
+
+state 182
+
+    scalar_exp  ->  scalar_exp . PLUS scalar_exp   (rule 97)
+    scalar_exp  ->  scalar_exp . MINUS scalar_exp   (rule 98)
+    scalar_exp  ->  scalar_exp . TIMES scalar_exp   (rule 99)
+    scalar_exp  ->  scalar_exp TIMES scalar_exp .   (rule 99)
+    scalar_exp  ->  scalar_exp . DIVIDE scalar_exp   (rule 100)
+
+
+    $default	reduce using rule 99 (scalar_exp)
+
+
+
+state 183
+
+    scalar_exp  ->  scalar_exp . PLUS scalar_exp   (rule 97)
+    scalar_exp  ->  scalar_exp . MINUS scalar_exp   (rule 98)
+    scalar_exp  ->  scalar_exp . TIMES scalar_exp   (rule 99)
+    scalar_exp  ->  scalar_exp . DIVIDE scalar_exp   (rule 100)
+    scalar_exp  ->  scalar_exp DIVIDE scalar_exp .   (rule 100)
+
+
+    $default	reduce using rule 100 (scalar_exp)
+
+
+
+state 184
+
+    scalar_exp  ->  PARENTHESEOPEN . scalar_exp PARENTHESECLOSE   (rule 105)
+    subquery  ->  PARENTHESEOPEN . select PARENTHESECLOSE   (rule 110)
+
+    TOKSELECT	shift, and go to state 8
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 121
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    select	go to state 167
+    scalar_exp	go to state 171
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 123
+
+
+
+state 185
+
+    comparison_predicate  ->  scalar_exp COMPARISON scalar_exp .   (rule 95)
+    scalar_exp  ->  scalar_exp . PLUS scalar_exp   (rule 97)
+    scalar_exp  ->  scalar_exp . MINUS scalar_exp   (rule 98)
+    scalar_exp  ->  scalar_exp . TIMES scalar_exp   (rule 99)
+    scalar_exp  ->  scalar_exp . DIVIDE scalar_exp   (rule 100)
+
+    PLUS	shift, and go to state 131
+    MINUS	shift, and go to state 132
+    TIMES	shift, and go to state 133
+    DIVIDE	shift, and go to state 134
+
+    $default	reduce using rule 95 (comparison_predicate)
+
+
+
+state 186
+
+    comparison_predicate  ->  scalar_exp COMPARISON subquery .   (rule 96)
+
+    $default	reduce using rule 96 (comparison_predicate)
+
+
+
+state 187
+
+    test_for_null  ->  column_ref TOKIS TOKNULL .   (rule 119)
+
+    $default	reduce using rule 119 (test_for_null)
+
+
+
+state 188
+
+    test_for_null  ->  column_ref TOKIS NOT . TOKNULL   (rule 118)
+
+    TOKNULL	shift, and go to state 201
+
+
+
+state 189
+
+    insert_values  ->  insert_values IDENT . VIRGULE   (rule 56)
+    insert_values  ->  insert_values IDENT .   (rule 57)
+
+    VIRGULE	shift, and go to state 202
+
+    $default	reduce using rule 57 (insert_values)
+
+
+
+state 190
+
+    insert  ->  TOKINSERT TOKINTO table_ident TOKVALUES PARENTHESEOPEN insert_values PARENTHESECLOSE .   (rule 54)
+
+    $default	reduce using rule 54 (insert)
+
+
+
+state 191
+
+    column_definition_commalist  ->  column_definition_commalist VIRGULE column_definition .   (rule 24)
+
+    $default	reduce using rule 24 (column_definition_commalist)
+
+
+
+state 192
+
+    subquery  ->  PARENTHESEOPEN select PARENTHESECLOSE .   (rule 110)
+
+    $default	reduce using rule 110 (subquery)
+
+
+
+state 193
+
+    column_ref  ->  IDENT DOT IDENT DOT . IDENT   (rule 113)
+
+    IDENT	shift, and go to state 203
+
+
+
+state 194
+
+    between_predicate  ->  scalar_exp TOKBETWEEN scalar_exp AND . scalar_exp   (rule 115)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 121
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    scalar_exp	go to state 204
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 123
+
+
+
+state 195
+
+    atom_commalist  ->  atom .   (rule 124)
+
+    $default	reduce using rule 124 (atom_commalist)
+
+
+
+state 196
+
+    in_predicate  ->  scalar_exp TOKIN PARENTHESEOPEN subquery . PARENTHESECLOSE   (rule 121)
+
+    PARENTHESECLOSE	shift, and go to state 205
+
+
+
+state 197
+
+    in_predicate  ->  scalar_exp TOKIN PARENTHESEOPEN atom_commalist . PARENTHESECLOSE   (rule 123)
+    atom_commalist  ->  atom_commalist . VIRGULE atom   (rule 125)
+
+    VIRGULE	shift, and go to state 206
+    PARENTHESECLOSE	shift, and go to state 207
+
+
+
+state 198
+
+    scalar_exp  ->  scalar_exp . PLUS scalar_exp   (rule 97)
+    scalar_exp  ->  scalar_exp . MINUS scalar_exp   (rule 98)
+    scalar_exp  ->  scalar_exp . TIMES scalar_exp   (rule 99)
+    scalar_exp  ->  scalar_exp . DIVIDE scalar_exp   (rule 100)
+    between_predicate  ->  scalar_exp NOT TOKBETWEEN scalar_exp . AND scalar_exp   (rule 114)
+
+    AND 	shift, and go to state 208
+    PLUS	shift, and go to state 131
+    MINUS	shift, and go to state 132
+    TIMES	shift, and go to state 133
+    DIVIDE	shift, and go to state 134
+
+
+
+state 199
+
+    in_predicate  ->  scalar_exp NOT TOKIN PARENTHESEOPEN . subquery PARENTHESECLOSE   (rule 120)
+    in_predicate  ->  scalar_exp NOT TOKIN PARENTHESEOPEN . atom_commalist PARENTHESECLOSE   (rule 122)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    PARENTHESEOPEN	shift, and go to state 115
+
+    atom	go to state 195
+    literal	go to state 101
+    subquery	go to state 209
+    atom_commalist	go to state 210
+
+
+
+state 200
+
+    like_predicate  ->  scalar_exp NOT TOKLIKE atom .   (rule 116)
+
+    $default	reduce using rule 116 (like_predicate)
+
+
+
+state 201
+
+    test_for_null  ->  column_ref TOKIS NOT TOKNULL .   (rule 118)
+
+    $default	reduce using rule 118 (test_for_null)
+
+
+
+state 202
+
+    insert_values  ->  insert_values IDENT VIRGULE .   (rule 56)
+
+    $default	reduce using rule 56 (insert_values)
+
+
+
+state 203
+
+    column_ref  ->  IDENT DOT IDENT DOT IDENT .   (rule 113)
+
+    $default	reduce using rule 113 (column_ref)
+
+
+
+state 204
+
+    scalar_exp  ->  scalar_exp . PLUS scalar_exp   (rule 97)
+    scalar_exp  ->  scalar_exp . MINUS scalar_exp   (rule 98)
+    scalar_exp  ->  scalar_exp . TIMES scalar_exp   (rule 99)
+    scalar_exp  ->  scalar_exp . DIVIDE scalar_exp   (rule 100)
+    between_predicate  ->  scalar_exp TOKBETWEEN scalar_exp AND scalar_exp .   (rule 115)
+
+    PLUS	shift, and go to state 131
+    MINUS	shift, and go to state 132
+    TIMES	shift, and go to state 133
+    DIVIDE	shift, and go to state 134
+
+    $default	reduce using rule 115 (between_predicate)
+
+
+
+state 205
+
+    in_predicate  ->  scalar_exp TOKIN PARENTHESEOPEN subquery PARENTHESECLOSE .   (rule 121)
+
+    $default	reduce using rule 121 (in_predicate)
+
+
+
+state 206
+
+    atom_commalist  ->  atom_commalist VIRGULE . atom   (rule 125)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+
+    atom	go to state 211
+    literal	go to state 101
+
+
+
+state 207
+
+    in_predicate  ->  scalar_exp TOKIN PARENTHESEOPEN atom_commalist PARENTHESECLOSE .   (rule 123)
+
+    $default	reduce using rule 123 (in_predicate)
+
+
+
+state 208
+
+    between_predicate  ->  scalar_exp NOT TOKBETWEEN scalar_exp AND . scalar_exp   (rule 114)
+
+    STRING	shift, and go to state 88
+    FLOAT	shift, and go to state 89
+    INTEGER	shift, and go to state 90
+    IDENT	shift, and go to state 91
+    PARENTHESEOPEN	shift, and go to state 121
+    PLUS	shift, and go to state 94
+    MINUS	shift, and go to state 95
+
+    scalar_exp	go to state 212
+    atom	go to state 100
+    literal	go to state 101
+    column_ref	go to state 123
+
+
+
+state 209
+
+    in_predicate  ->  scalar_exp NOT TOKIN PARENTHESEOPEN subquery . PARENTHESECLOSE   (rule 120)
+
+    PARENTHESECLOSE	shift, and go to state 213
+
+
+
+state 210
+
+    in_predicate  ->  scalar_exp NOT TOKIN PARENTHESEOPEN atom_commalist . PARENTHESECLOSE   (rule 122)
+    atom_commalist  ->  atom_commalist . VIRGULE atom   (rule 125)
+
+    VIRGULE	shift, and go to state 206
+    PARENTHESECLOSE	shift, and go to state 214
+
+
+
+state 211
+
+    atom_commalist  ->  atom_commalist VIRGULE atom .   (rule 125)
+
+    $default	reduce using rule 125 (atom_commalist)
+
+
+
+state 212
+
+    scalar_exp  ->  scalar_exp . PLUS scalar_exp   (rule 97)
+    scalar_exp  ->  scalar_exp . MINUS scalar_exp   (rule 98)
+    scalar_exp  ->  scalar_exp . TIMES scalar_exp   (rule 99)
+    scalar_exp  ->  scalar_exp . DIVIDE scalar_exp   (rule 100)
+    between_predicate  ->  scalar_exp NOT TOKBETWEEN scalar_exp AND scalar_exp .   (rule 114)
+
+    PLUS	shift, and go to state 131
+    MINUS	shift, and go to state 132
+    TIMES	shift, and go to state 133
+    DIVIDE	shift, and go to state 134
+
+    $default	reduce using rule 114 (between_predicate)
+
+
+
+state 213
+
+    in_predicate  ->  scalar_exp NOT TOKIN PARENTHESEOPEN subquery PARENTHESECLOSE .   (rule 120)
+
+    $default	reduce using rule 120 (in_predicate)
+
+
+
+state 214
+
+    in_predicate  ->  scalar_exp NOT TOKIN PARENTHESEOPEN atom_commalist PARENTHESECLOSE .   (rule 122)
+
+    $default	reduce using rule 122 (in_predicate)
+
+
+
+state 215
+
+    $   	go to state 216
+
+
+
+state 216
+
+    $default	accept

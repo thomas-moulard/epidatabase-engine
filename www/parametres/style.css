@@ -1,0 +1,126 @@
+body, table
+{
+	background-color: #E5E5E5;
+	font-family: tahoma;
+	font-size: 8pt;
+	color: #000000;
+}
+.contenu
+{
+	background-color: #F1F1F1;
+	font-family: tahoma;
+	font-size: 8pt;
+	font color: #000000;
+	padding: 8px;
+}
+.bordure
+{
+	background-color: #888888;
+}
+.bas
+{
+	font-family: tahoma;
+	font-size: 7pt;
+	color: #888888;
+	border-bottom: 1px solid #888888;
+	background-color: #F1F1F1;
+}
+.notabs
+{
+	border-bottom: 1px solid #888888;
+	background-color: #E5E5E5;
+	color: #E5E5E5;
+	font-family: tahoma;
+	font-size: 8pt;
+}
+.tab_on
+{
+	border-top: 1px solid #888888;
+	border-left: 1px solid #888888;
+	border-right: 1px solid #888888;
+	background-color: #F1F1F1;
+	font-weight: bold;
+	padding: 2px;
+	width: 50px;
+}
+.tab_off
+{
+	border-top: 1px solid #888888;
+	border-left: 1px solid #888888;
+	border-right: 1px solid #888888;
+	border-bottom: 1px solid #888888;
+	background-color: #D0D0D0;
+	padding: 2px;
+	width: 50px;
+}
+
+.h1
+{
+	font-family: trebuchet ms;
+	font-size: 12pt;
+	color: #FF8800;
+	font-weight: bold;
+}
+.h0
+{
+	color: #888888;
+	font-family: tahoma;
+	font-size: 7pt;
+	font-weight: normal;
+}
+
+a.link_on
+{
+	font-family: tahoma;
+	font-size: 8pt;
+	color: #FF8800;
+	text-decoration: none;
+}
+a.link_off
+{
+	font-family: tahoma;
+	font-size: 8pt;
+	color: #000000;
+	text-decoration: none;
+}
+a
+{
+	color: #FF8800;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+.input_text
+{
+	font-family: tahoma;
+	font-size: 8pt;
+	color: #000000;
+	border: 1px solid #888888;
+}
+.input_button
+{
+	font-family: tahoma;
+	font-size: 8pt;
+	color: #FF8800;
+	font-weight: bold;
+	background-color: #F1F1F1;
+	border: 1px solid #888888;
+}
+
+.entete
+{
+	background-color: #F1F1F1;
+	font-weight: bold;
+}
+.cellule1
+{
+	background-color: #FFFFFF;
+}
+.cellule2
+{
+	background-color: #F1F1F1;
+}

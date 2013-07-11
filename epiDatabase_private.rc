@@ -1,0 +1,35 @@
+/* THIS FILE WILL BE OVERWRITTEN BY DEV-C++ */
+/* DO NOT EDIT! */
+
+#include <windows.h> // include for version info constants
+
+
+//
+// TO CHANGE VERSION INFORMATION, EDIT PROJECT OPTIONS...
+//
+1 VERSIONINFO
+FILEVERSION 0,1,1,1279
+PRODUCTVERSION 0,1,1,1279
+FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+	 {
+		 BLOCK "040C04E4"
+		 {
+			 VALUE "CompanyName", "eXtamp"
+			 VALUE "FileVersion", ""
+			 VALUE "FileDescription", "epiDatabase"
+			 VALUE "InternalName", "epidb"
+			 VALUE "LegalCopyright", ""
+			 VALUE "LegalTrademarks", ""
+			 VALUE "OriginalFilename", "epiDatabase.exe"
+			 VALUE "ProductName", "epiDatabase"
+			 VALUE "ProductVersion", ""
+		 }
+	 }
+  BLOCK "VarFileInfo"
+	 {
+		 VALUE "Translation", 0x040C, 1252
+	 }
+}
+

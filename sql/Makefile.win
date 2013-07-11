@@ -1,0 +1,32 @@
+# Project: Parseur
+# Makefile created by Dev-C++ 4.9.9.1
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = lex.yy.o sql_tab.o $(RES)
+LINKOBJ  = lex.yy.o sql_tab.o $(RES)
+LIBS =  -L"C:/Program Files/Dev-Cpp Beta/lib"  
+INCS =  -I"C:/Program Files/Dev-Cpp Beta/include" 
+CXXINCS =  -I"C:/Program Files/Dev-Cpp Beta/include/c++/3.3.1"  -I"C:/Program Files/Dev-Cpp Beta/include/c++/3.3.1/mingw32"  -I"C:/Program Files/Dev-Cpp Beta/include/c++/3.3.1/backward"  -I"C:/Program Files/Dev-Cpp Beta/lib/gcc-lib/mingw32/3.3.1/include"  -I"C:/Program Files/Dev-Cpp Beta/include" 
+BIN  = Parseur.exe
+CXXFLAGS = $(CXXINCS)   -lfl
+CFLAGS = $(INCS)   -lfl
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Parseur.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Parseur.exe" $(LIBS)
+
+lex.yy.o: lex.yy.c
+	$(CC) -c lex.yy.c -o lex.yy.o $(CFLAGS)
+
+sql_tab.o: sql_tab.c
+	$(CC) -c sql_tab.c -o sql_tab.o $(CFLAGS)
